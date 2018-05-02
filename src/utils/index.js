@@ -7,6 +7,7 @@ import setOrganizer from './set-organizer'
 import setAlarm from './set-alarm'
 import setDescription from './set-description'
 import formatDuration from './format-duration'
+import setRecurrence from './set-recurrence'
 
 export {
   setDate,
@@ -17,5 +18,6 @@ export {
   setOrganizer,
   setAlarm,
   formatDuration,
-  setDescription
+  setDescription,
+  setRecurrence
 }

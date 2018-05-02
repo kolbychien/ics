@@ -5,6 +5,7 @@ import {
     setDate,
     setDescription,
     setGeolocation,
+    setRecurrence,
     formatDuration
 } from '../utils'
 
@@ -26,7 +27,8 @@ export default function formatEvent (attributes = {}) {
     categories,
     organizer,
     attendees,
-    alarms
+    alarms,
+    recurrence
   } = attributes
 
     let icsFormat = ''
