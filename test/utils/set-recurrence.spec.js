@@ -7,7 +7,7 @@ describe('utils.setRecurrence', () => {
         const attributes = {
             frequency: 'weekly'
         }
-        expect(setRecurrence(attributes)).to.equal('RRULE:FREQ=WEEKLY\r\n')
+        expect(setRecurrence(attributes)).to.equal('FREQ=WEEKLY\r\n')
     })
 
     it('creates recurrence with set end', () => {
@@ -15,7 +15,7 @@ describe('utils.setRecurrence', () => {
             frequency: 'daily',
             recurrenceEnd: [2018,6,22]
         }
-        expect(setRecurrence(attributes)).to.equal('RRULE:FREQ=DAILY\r\n;UNTIL=20180622T000000\r\n')
+        expect(setRecurrence(attributes)).to.equal('FREQ=DAILY\r\n;UNTIL=20180622T000000\r\n')
 
     })
 
@@ -24,7 +24,7 @@ describe('utils.setRecurrence', () => {
             frequency: 'monthly',
             count: 5
         }
-        expect(setRecurrence(attributes)).to.equal('RRULE:FREQ=MONTHLY\r\n;COUNT=5\r\n')
+        expect(setRecurrence(attributes)).to.equal('FREQ=MONTHLY\r\n;COUNT=5\r\n')
     })
 
     it('creates recurrence with specified interval', () => {
@@ -32,6 +32,6 @@ describe('utils.setRecurrence', () => {
             frequency: 'yearly',
             interval: 2
         }
-        expect(setRecurrence(attributes)).to.equal('RRULE:FREQ=YEARLY\r\n;INTERVAL=2\r\n')
+        expect(setRecurrence(attributes)).to.equal('FREQ=YEARLY\r\n;INTERVAL=2\r\n')
     })
 })

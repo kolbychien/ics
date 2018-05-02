@@ -19,7 +19,7 @@ export default function setRecurrence(attributes = {}) {
     } = attributes
 
     if(frequency && typeof frequency === 'string') {
-        let formattedString = `RRULE:FREQ=${normalizeString(frequency)}\r\n`
+        let formattedString = `FREQ=${normalizeString(frequency)}\r\n`
         formattedString += interval ? `;INTERVAL=${interval}\r\n` : ''
         formattedString += recurrenceEnd ? `;UNTIL=${formatDate(recurrenceEnd)}\r\n` : ''
         formattedString += count ? `;COUNT=${count}\r\n` : ''
